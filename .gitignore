@@ -1,4 +1,97 @@
-data/
+# Virtual Environment Files
+venv/
+.venv/
+env/
+ENV/
+venv*/
+.venv*/
+env*/
+ENV*/
+
+# Python Cache and Compiled Files
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sndhdr/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Installer logs
+pip-selfcheck.json
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Environments
 .env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# MLflow and Data
+mlruns/
+mlartifacts/
+data/
+*.csv
+*.parquet
+*.feather
+
+# IDE Specific
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+*.log
+logs/
+
+# Model files
+*.pkl
+*.joblib
+*.h5
+*.onnx
+*.pb
+
+# Docker
+docker-compose.override.yml
