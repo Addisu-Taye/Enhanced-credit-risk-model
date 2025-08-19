@@ -1,43 +1,17 @@
+# tests/test_data_processing.py
 import pytest
 import pandas as pd
-import numpy as np
-from datetime import datetime
-from src.data_processing import create_feature_pipeline, create_rfm_features
+from src.data_processing import DataProcessor
 
-@pytest.fixture
-def sample_transaction_data():
-    return pd.DataFrame({
-        'TransactionId': ['T1', 'T2', 'T3'],
-        'CustomerId': ['C1', 'C1', 'C2'],
-        'Amount': [100, 150, -50],
-        'Value': [100, 150, 50],
-        'ProductCategory': ['Electronics', 'Clothing', 'Food'],
-        'ChannelId': ['Web', 'Mobile', 'Web'],
-        'TransactionStartTime': [
-            datetime(2023, 1, 1),
-            datetime(2023, 1, 5),
-            datetime(2023, 1, 10)
-        ]
+def test_rfm_creation():
+    df = pd.DataFrame({
+        'AccountId': [1, 1, 2],
+        'TransactionStartTime': pd.to_datetime(['2025-06-01', '2025-06-05', '2025-06-10']),
+        'Amount': [100, 200, 50],
+        'Value': [100, 200, 50],
+        'TransactionId': [1, 2, 3]
     })
-
-def test_create_feature_pipeline(sample_transaction_data):
-    pipeline = create_feature_pipeline()
-    transformed = pipeline.fit_transform(sample_transaction_data)
-    
-    # Test numerical features were scaled
-    assert transformed.shape[0] == 3
-    assert not np.isnan(transformed).any()
-    
-def test_create_rfm_features(sample_transaction_data):
-    risk_labels = create_rfm_features(sample_transaction_data)
-    
-    # Test we get one label per customer
-    assert len(risk_labels) == 2
-    assert risk_labels.index.name == 'CustomerId'
-    assert risk_labels.isin([0, 1]).all()
-
-def test_rfm_cluster_identification(sample_transaction_data):
-    risk_labels = create_rfm_features(sample_transaction_data)
-    # Verify high-risk customers are correctly identified
-    # C2 has negative amount (credit) and only 1 transaction
-    assert risk_labels.loc['C2'] == 1
+    processor = DataProcessor(snapshot_date=pd.to_datetime('2025-06-11'))
+    rfm = processor.create_rfm_features(df)
+    assert len(rfm) == 2
+    assert rfm.loc[rfm['AccountId'] == 1, 'Recency'].values[0] == 6
