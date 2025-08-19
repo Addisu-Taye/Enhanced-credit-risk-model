@@ -40,35 +40,43 @@ It leverages **machine learning** techniques for feature engineering, model trai
 git clone https://github.com/Addisu-Taye/Enhanced-credit-risk-model.git
 cd credit-risk-model
 2️⃣ Create Virtual Environment
-bash
-
+```
+```bash
 python -m venv venv
 source venv/bin/activate   # On Linux/Mac
 venv\Scripts\activate      # On Windows
+```
 3️⃣ Install Dependencies
-bash
+```bash
 
 pip install -r requirements.txt
+```
 4️⃣ Run Training
-bash
+```bash
 
 python train_model.py
+```
 📂 Repository Structure
-credit-risk-model/
-
-data/ — Raw & processed data
-
-notebooks/ — Jupyter notebooks for EDA & experiments
-
-models/ — Trained model artifacts
-
-reports/ — Generated reports
-
-train_model.py — Main training script
-
-requirements.txt — Dependencies
-
-README.md — Project documentation
+```bash
+Enhanced-credit-risk-model/
+├── data/
+│ ├── raw/
+│ │ └── raw_data.csv
+│ └── processed/
+│ └── processed_data.csv
+├── mlruns/ # MLflow experiment tracking
+├── models/ # Saved scaler and feature columns
+│ ├── scaler.joblib
+│ └── feature_columns.json
+├── src/
+│ ├── data_processing.py # RFM, clustering, target creation
+│ ├── train.py # Model training & MLflow logging
+│ └── api/
+│ └── main.py # FastAPI application
+├── requirements.txt
+├── README.md
+└── Dockerfile
+```
 
 🧰 Tech Stack
 Python 3.10+
