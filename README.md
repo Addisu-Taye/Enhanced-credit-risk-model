@@ -39,8 +39,10 @@ It leverages **machine learning** techniques for feature engineering, model trai
 ```bash
 git clone https://github.com/Addisu-Taye/Enhanced-credit-risk-model.git
 cd credit-risk-model
-2️⃣ Create Virtual Environment
 ```
+
+2️⃣ Create Virtual Environment
+
 ```bash
 python -m venv venv
 source venv/bin/activate   # On Linux/Mac
