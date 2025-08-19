@@ -35,31 +35,26 @@ It leverages **machine learning** techniques for feature engineering, model trai
 
 ## 🚀 How to Use
 
-### 1️⃣ Clone Repository
-```bash
+## 🚀 Setup Instructions
+
+# 1️⃣ Clone Repository
 git clone https://github.com/Addisu-Taye/Enhanced-credit-risk-model.git
 cd credit-risk-model
-2️⃣ Create Virtual Environment
-bash
-Copy
-Edit
+
+# 2️⃣ Create Virtual Environment
 python -m venv venv
 source venv/bin/activate   # On Linux/Mac
 venv\Scripts\activate      # On Windows
-3️⃣ Install Dependencies
-bash
-Copy
-Edit
+
+# 3️⃣ Install Dependencies
 pip install -r requirements.txt
-4️⃣ Run Training
-bash
-Copy
-Edit
+
+# 4️⃣ Run Training
 python train_model.py
-📂 Repository Structure
-bash
-Copy
-Edit
+
+---
+
+## 📂 Repository Structure
 credit-risk-model/
 │── data/               # Raw & processed data
 │── notebooks/          # Jupyter notebooks for EDA & experiments
@@ -68,21 +63,24 @@ credit-risk-model/
 │── train_model.py      # Main training script
 │── requirements.txt    # Dependencies
 │── README.md           # Project documentation
-🧰 Tech Stack
-Python 3.10+
 
-Scikit-learn
+---
 
-MLflow
+## 🧰 Tech Stack
+- Python 3.10+  
+- Scikit-learn  
+- MLflow  
+- Pandas & NumPy  
+- Matplotlib & Seaborn  
 
-Pandas & NumPy
+---
 
-Matplotlib & Seaborn
+## 📜 License
+This project is licensed under the **MIT License** – see the LICENSE file for details.  
 
-📜 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+---
 
-👨‍💻 Author
-Addisu Taye
-📧 Contact: addtaye@gmail.com
-🔗 LinkedIn: https://www.linkedin.com/in/addisu-taye/
+## 👨‍💻 Author
+**Addisu Taye**  
+📧 Contact: [addtaye@gmail.com](mailto:addtaye@gmail.com)  
+🔗 LinkedIn: [https://www.linkedin.com/in/addisu-taye/](https://www.linkedin.com/in/addisu-taye/)
