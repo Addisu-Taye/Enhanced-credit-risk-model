@@ -33,54 +33,60 @@ It leverages **machine learning** techniques for feature engineering, model trai
 
 ---
 
-## 🚀 How to Use
-
 ## 🚀 Setup Instructions
 
-# 1️⃣ Clone Repository
+### 1️⃣ Clone Repository
+```bash
 git clone https://github.com/Addisu-Taye/Enhanced-credit-risk-model.git
 cd credit-risk-model
+2️⃣ Create Virtual Environment
+bash
 
-# 2️⃣ Create Virtual Environment
 python -m venv venv
 source venv/bin/activate   # On Linux/Mac
 venv\Scripts\activate      # On Windows
+3️⃣ Install Dependencies
+bash
 
-# 3️⃣ Install Dependencies
 pip install -r requirements.txt
+4️⃣ Run Training
+bash
 
-# 4️⃣ Run Training
 python train_model.py
-
----
-
-## 📂 Repository Structure
+📂 Repository Structure
 credit-risk-model/
-│── data/               # Raw & processed data
-│── notebooks/          # Jupyter notebooks for EDA & experiments
-│── models/             # Trained model artifacts
-│── reports/            # Generated reports
-│── train_model.py      # Main training script
-│── requirements.txt    # Dependencies
-│── README.md           # Project documentation
 
----
+data/ — Raw & processed data
 
-## 🧰 Tech Stack
-- Python 3.10+  
-- Scikit-learn  
-- MLflow  
-- Pandas & NumPy  
-- Matplotlib & Seaborn  
+notebooks/ — Jupyter notebooks for EDA & experiments
 
----
+models/ — Trained model artifacts
 
-## 📜 License
-This project is licensed under the **MIT License** – see the LICENSE file for details.  
+reports/ — Generated reports
 
----
+train_model.py — Main training script
 
-## 👨‍💻 Author
-**Addisu Taye**  
-📧 Contact: [addtaye@gmail.com](mailto:addtaye@gmail.com)  
-🔗 LinkedIn: [https://www.linkedin.com/in/addisu-taye/](https://www.linkedin.com/in/addisu-taye/)
+requirements.txt — Dependencies
+
+README.md — Project documentation
+
+🧰 Tech Stack
+Python 3.10+
+
+Scikit-learn
+
+MLflow
+
+Pandas & NumPy
+
+Matplotlib & Seaborn
+
+📜 License
+This project is licensed under the MIT License – see the LICENSE file for details.
+
+👨‍💻 Author
+Addisu Taye
+📧 Contact: addtaye@gmail.com
+🔗 LinkedIn: https://www.linkedin.com/in/addisu-taye/
+
+
